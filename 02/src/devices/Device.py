@@ -33,12 +33,12 @@ def read_line(device: Device) -> str:
     :exception PermissionError если устройство не открыто на чтение
     """
     if not is_readable_device(device):
-        raise Exception('Reading from the devices not allowed.')
+        raise PermissionError('Reading from the devices not allowed.')
 
     return __take_line(device.data)
 
 
-def open_device(name: str) -> Device:q
+def open_device(name: str) -> Device:
     """
     Открывает указанное устройство.
     :param name: имя устройства
