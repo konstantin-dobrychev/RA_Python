@@ -20,7 +20,7 @@ def is_readable_device(device: Device) -> bool:
 
 
 def is_writable_device(device: Device) -> bool:
-    """Показывает, можно писать в устройства."""
+    """Показывает, можно писать в устройство."""
     return DeviceMode.WriteOnly in device.mode
 
 
