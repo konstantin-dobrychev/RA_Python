@@ -86,4 +86,13 @@ class UnknownModel(AnalyzerError):
 
 
 if __name__ == '__main__':
-    pass
+    try:
+
+        from datetime import datetime
+        raise InvalidTimePeriod(datetime.now(), datetime.now())
+
+    except AnalyzerError as error:
+        print(error.error_code)
+        print(error.details)
+    except IOError:
+        print('Error (((')
