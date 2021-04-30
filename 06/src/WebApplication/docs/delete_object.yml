@@ -1,0 +1,23 @@
+description: Удалить слово из коллекции.
+tags:
+- Collections
+produces:
+- application/json
+parameters:
+- in: path
+  name: collection
+  description: коллекция
+  required: true
+  schema:
+    type: string
+- in: path
+  name: key
+  description: ключ объекта (слова) в хранилище
+  required: true
+  schema:
+    type: string
+responses:
+    "204":
+        description: слово успешно удалено
+    "404":
+      description: слово не найдено

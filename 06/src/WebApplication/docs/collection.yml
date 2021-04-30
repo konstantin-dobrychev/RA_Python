@@ -1,0 +1,15 @@
+description: Получить коллекцию слов. Если запрошенной коллекции не существует, она будет создана.
+tags:
+- Collections
+produces:
+- application/json
+parameters:
+- in: path
+  name: collection
+  description: название коллекции
+  required: true
+  schema:
+    type: string
+responses:
+    "200":
+        description: возвращает запрошенную коллекцию
